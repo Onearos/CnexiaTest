@@ -1,24 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ind-qf-mmY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Guidomia View Controller-->
+        <scene sceneID="GSI-t5-A3f">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="ind-qf-mmY" customClass="GuidomiaViewController" customModule="CnexiaTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x3d-by-7oc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2U3-gX-omm" customClass="HeaderImage" customModule="CnexiaTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="94" width="414" height="207"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4FL-q3-Fr4" customClass="NavigationBar" customModule="CnexiaTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DPX-6F-FaL"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Nu-6H-mDs">
+                                <rect key="frame" x="0.0" y="466.5" width="414" height="429.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJm-SK-fjE" customClass="FilterView" customModule="CnexiaTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="301" width="414" height="165.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="k9P-K3-ObZ"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WJm-SK-fjE" firstAttribute="leading" secondItem="k9P-K3-ObZ" secondAttribute="leading" id="04s-NU-c0t"/>
+                            <constraint firstItem="k9P-K3-ObZ" firstAttribute="trailing" secondItem="0Nu-6H-mDs" secondAttribute="trailing" id="1eH-wU-U2p"/>
+                            <constraint firstItem="2U3-gX-omm" firstAttribute="height" secondItem="x3d-by-7oc" secondAttribute="width" multiplier="0.5" id="2wG-DF-SH9"/>
+                            <constraint firstAttribute="bottom" secondItem="0Nu-6H-mDs" secondAttribute="bottom" id="6Lk-aL-ka3"/>
+                            <constraint firstItem="0Nu-6H-mDs" firstAttribute="leading" secondItem="k9P-K3-ObZ" secondAttribute="leading" id="8WZ-uA-mz7"/>
+                            <constraint firstItem="WJm-SK-fjE" firstAttribute="trailing" secondItem="k9P-K3-ObZ" secondAttribute="trailing" id="9FQ-ut-AND"/>
+                            <constraint firstItem="k9P-K3-ObZ" firstAttribute="trailing" secondItem="2U3-gX-omm" secondAttribute="trailing" id="A7V-zu-l1O"/>
+                            <constraint firstItem="4FL-q3-Fr4" firstAttribute="leading" secondItem="k9P-K3-ObZ" secondAttribute="leading" id="MgO-PL-4Ws"/>
+                            <constraint firstItem="k9P-K3-ObZ" firstAttribute="trailing" secondItem="4FL-q3-Fr4" secondAttribute="trailing" id="PAH-Ka-Oro"/>
+                            <constraint firstItem="2U3-gX-omm" firstAttribute="top" secondItem="4FL-q3-Fr4" secondAttribute="bottom" id="RLi-97-euZ"/>
+                            <constraint firstItem="4FL-q3-Fr4" firstAttribute="top" secondItem="k9P-K3-ObZ" secondAttribute="top" id="YRo-TB-Jr0"/>
+                            <constraint firstItem="WJm-SK-fjE" firstAttribute="top" secondItem="2U3-gX-omm" secondAttribute="bottom" id="fFV-8D-aS0"/>
+                            <constraint firstItem="WJm-SK-fjE" firstAttribute="height" secondItem="x3d-by-7oc" secondAttribute="width" multiplier="0.4" id="qp5-GX-Afs"/>
+                            <constraint firstItem="0Nu-6H-mDs" firstAttribute="top" secondItem="WJm-SK-fjE" secondAttribute="bottom" id="stj-vD-nkd"/>
+                            <constraint firstItem="2U3-gX-omm" firstAttribute="leading" secondItem="k9P-K3-ObZ" secondAttribute="leading" id="tEf-os-1ua"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dgJ-jr-0qe"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="carsTableView" destination="0Nu-6H-mDs" id="A7D-tq-j8V"/>
+                        <outlet property="filterView" destination="WJm-SK-fjE" id="bOO-tE-Yhw"/>
+                        <outlet property="headerImage" destination="2U3-gX-omm" id="l5A-Es-sDh"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PkV-3z-fDP" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WRr-xj-GUn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ja1-cK-CKJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="etu-Xh-BvW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ind-qf-mmY" kind="relationship" relationship="rootViewController" id="zN7-gJ-Xxc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mQ4-Nj-3dO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </scene>
     </scenes>
 </document>
